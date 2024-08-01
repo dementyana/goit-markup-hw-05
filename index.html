@@ -475,30 +475,31 @@ ldiv<!DOCTYPE html>
           </ul>
         </div>
 
-        <div>
-          <form action="">
-            <div class="footer-form">
-              <label class="subscribe" for="subscribe">Subscribe</label>
+        <div class="footer-small-form">
+          <p class="footer-form-text">Subscribe</p>
+          <form action="" class="footer-form" autocomplete="off" novalidate>
+            <label class="footer-label">
               <input
                 class="footer-mail"
                 type="email"
                 name="subscribe"
-                id="subscribe"
                 placeholder="E-mail"
               />
-              <button class="send-mail">
-                Subscribe
-                <svg class="lot" width="24" height="24">
-                  <use href="./images/icons.svg#icon-lot"></use>
-                </svg>
-              </button>
-            </div>
+            </label>
+            <button class="send-mail" type="submit">
+              Subscribe
+              <svg class="lot" width="24" height="24">
+                <use href="./images/icons.svg#icon-lot"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
     </footer>
 
-    <div class="backdrop is-open">
+    <div class="backdrop">
+      <!-- is-open -->
+
       <div class="modal">
         <button class="btn-close-form" type="button" name="close-form">
           <svg class="modal-icon-close" width="8" height="8">
