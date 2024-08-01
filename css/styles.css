@@ -754,13 +754,13 @@ textarea {
 
 
 
-.form-textarea:hover,
-.form-textarea:focus {
+.form-comment:hover,
+.form-comment:focus {
     border-color: #4D5AE5;
 }
 
 
-.form-textarea::placeholder {
+.form-comment::placeholder {
     color: rgba(46, 47, 66, 0.4);
 }
 
