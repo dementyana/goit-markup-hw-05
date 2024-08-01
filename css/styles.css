@@ -97,9 +97,7 @@ textarea {
     gap: 40px;
 }
 
-.nav-item {
 
-}
 
 .nav-link {
         display: block;
@@ -147,9 +145,7 @@ textarea {
     gap: 40px;
 }
  
-.contacts-item {
 
-}
 
 .contacts-link {
     display: block;
@@ -587,7 +583,7 @@ textarea {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    padding: 72px 24px 24px 24px;
     width: 408px;
     min-height: 584px;
     border-radius: 4px;
@@ -602,58 +598,61 @@ textarea {
 }
 
 .btn-close-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    border: 2px solid red;
-    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
     width: 24px;
     height: 24px;
     top: 24px;
-    right: 24px;
-    background-color: inherit;
+    right: 24px; 
+    background-color: #e7e9fc;
+    padding: 0;
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 }
 
-/* .modal-icon-close {
-    border-radius: 100%;
-    fill: #e7e9fc;
-    stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.1);
-} */
+.btn-close-form:hover,
+.btn-close-form:focus {
+    border: none;
+    background-color: #404bbf;
+}
 
 .btn-close-form:hover .modal-icon-close,
 .btn-close-form:focus .modal-icon-close,
 .btn-close-form:active .modal-icon-close {
-    border-radius: 100%;
-        fill: #404bbf;
-        
-         background-color: ;
-    border: none;
+    fill: #ffffff;
 }
 
-/* .modal-icon-x {
+.modal-icon-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: #2e2f42;
-} */
+}
 
 .btn-close-form:hover .modal-icon-x,
 .btn-close-form:focus .modal-icon-x,
 .btn-close-form:active .modal-icon-x {
-     fill: #fff;
+     fill: #ffffff;
 }
 
 .modal-title {
-    margin: 76px 24px 16px;
-/* font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #2e2f42;     */
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;    
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    padding: 0 24px;
+    padding: 0 ;
     width: 100%;
     height: 100%;
     gap: 8px;
@@ -665,10 +664,18 @@ textarea {
 .form-item {
     width: 360px;
     height: 58px;
+    margin-bottom: 8px;
 }
 
 .form-label {
+    display: block;
     width: 100%;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    margin-bottom: 4px;
 }
 
 .form-little-item {
@@ -684,23 +691,35 @@ textarea {
 
 .form-input {
     width: 100%;
+    height: 40px;
     padding-left: 38px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    outline: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+
 }
 
 .form-icon {
     position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
    
  
 }
 
 .form-input:focus +.form-icon,
 .form-input:active +.form-icon {
-    fill: #404bbf;
+    fill: #4D5AE5;
 }
 
 .form-input:focus,
 .form-input:active {
-    border: 1px solid #404bbf;
+    border-color: #4D5AE5;
 }
 
 .form-area {
@@ -711,16 +730,29 @@ textarea {
     justify-content: flex-start;
     flex-direction: column;
     gap: 4px;
+    margin-bottom: 16px;
 }
 
 .form-textarea {
     width: 100%;
-    max-width: 120px;
+    height: 120px;
     padding: 8px 16px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    outline: transparent;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:hover,
+.form-textarea:focus {
+    border-color: #4D5AE5;
 }
 
 
@@ -737,7 +769,8 @@ textarea {
 
 
 .form-accept {
-   
+    margin-bottom: 24px;
+
 }
 
 .form-check {
@@ -750,12 +783,32 @@ textarea {
  }
 
  .form-check:checked+.label-accept>span {
-    fill: #404bbf;
-    border: 1px solid #404bbf;
+    fill: #F4F4FD;
+    border: none;
+    background-color: #404bbf;
 }
 
 .label-accept {
     margin-right: 8px;
+    font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #8e8f99;
+
+}
+
+.check-accept {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+
 }
 
  .check {
@@ -763,18 +816,11 @@ textarea {
  }
 
 
-
- .form-check:active .check {
-     fill: #f4f4fd;
+ .check-accept:focus>.check,
+ .check-accept:active>.check {
+     fill:#ffffff;
  }
 
-.checkbox-text {
-    font-weight: 400;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-        color: #8e8f99;
-}
 
 .form-link {
     font-weight: 400;
@@ -786,25 +832,24 @@ textarea {
 }
 
 .submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 10px;
+    display: block;
     border: none;
     border-radius: 4px;
-    padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #ffffff;
     align-self: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: #4d5ae5;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin: 20px auto;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: #fff;
+    /* margin: 20px auto; */
+    cursor: pointer;
 }
 
 .submit:hover,
