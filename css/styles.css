@@ -725,13 +725,7 @@ textarea {
 }
 
 .form-area {
-    display: flex;
     width: 360px;
-    height: 138px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 4px;
     margin-bottom: 16px;
 }
 
@@ -820,9 +814,9 @@ textarea {
  }
 
 
- .check-accept:focus>.check,
- .check-accept:active>.check {
-     fill:#ffffff;
+ .check-accept:focus .check,
+ .check-accept:active .check {
+    fill: #ffffff;
  }
 
 
